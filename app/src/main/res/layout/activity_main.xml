@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfPozo"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de pozo"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1"
+
+                app:endIconMode="clear_text">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfPozo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusForward="@id/EtfTamanioBba"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfTamanioBba"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tamaño Bomba"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfTamanioBba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:nextFocusForward="@id/EtfProfBba"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfProfBba"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profundidad Bomba"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfProfBba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusForward="@id/EtfProfAncla"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfProfAncla"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profundidad Ancla"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfProfAncla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusForward="@id/EtfVarilla1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfVarilla1"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Varilla de 1'"
+
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfVarilla1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusForward="@id/EtfVarilla78"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfVarilla78"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Varilla 7/8'"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfVarilla78"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusForward="@id/EtfVarilla34"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfVarilla34"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Varilla 3/4'"
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfVarilla34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusForward="@id/EtfVarillaPeso"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfVarillaPeso"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Varilla de Peso"
+
+                android:paddingBottom="10dp"
+                app:boxStrokeColor="#5E35B1">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EtfVarillaPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Convertir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#673AB7"
+                android:text="CONVERTIR" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Contenido de la actividad -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
